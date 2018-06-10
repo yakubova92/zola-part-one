@@ -2,20 +2,70 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
+import Users from './Users';
+
+
+const data = [
+  {
+    "name": "Joe",
+    "age": 24,
+    "priority": 1,
+    "category": "cat2"
+  }, {
+    "name": "Jane",
+    "age": 76,
+    "priority": 4,
+    "category": "cat1"
+  }, {
+    "name": "Kevin",
+    "age": 32,
+    "priority": 2,
+    "category": "cat2"
+  }, {
+    "name": "Lucy",
+    "age": 54,
+    "priority": 1,
+    "category": "cat3"
+  }, {
+    "name": "Colin",
+    "age": 34,
+    "priority": 3,
+    "category": "cat1"
+  }, {
+    "name": "Franny",
+    "age": 36,
+    "priority": 2,
+    "category": "cat3"
+  }, {
+    "name": "Neil",
+    "age": 74,
+    "priority": 4,
+    "category": "cat2"
+  }, {
+    "name": "Katy",
+    "age": 55,
+    "priority": 3,
+    "category": "cat2"
+  }
+]
+
+export default class AllArtists extends Component {
+
+  constructor () {
+    super();
+    this.state = {
+      users: data
+    };
+  }
+
+  render () {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Users users={this.state.users}/>
       </div>
     );
   }
 }
 
-export default App;
+

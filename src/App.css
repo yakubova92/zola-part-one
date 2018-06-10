@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -20,6 +20,21 @@
 
 .App-intro {
   font-size: large;
+}*/
+
+.single-user {
+  border: 2px solid black;
+}
+.single-user h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+#age {
+  font-size: 12px;
+  font-style: italic;
+}
+#category {
+  font-size: 12px;
 }
 
 @keyframes App-logo-spin {
